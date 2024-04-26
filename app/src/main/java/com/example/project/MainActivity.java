@@ -30,15 +30,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume (){
+        super.onResume();
 
         myPreferenceRef = getSharedPreferences("MyPreferenceName", MODE_PRIVATE);
         myPreferenceEditor = myPreferenceRef.edit();
 
         // Display preferences
         TextView prefTextRef=new TextView(this);
+        Log.d("Injera1", "" + myPreferenceRef.getString("MyAppPreferenceString", "No preference found."));
         prefTextRef=(TextView)findViewById(R.id.prefText);
         prefTextRef.setText(myPreferenceRef.getString("MyAppPreferenceString", "No preference found."));
-
     }
 
 }
