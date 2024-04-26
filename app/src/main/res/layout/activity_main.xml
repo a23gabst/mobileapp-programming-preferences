@@ -6,22 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/myEdtTxt"
-        app:layout_constraintTop_toTopOf="parent"/>
     <Button
         android:text="@string/app_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/prefButton"
-        android:onClick="savePref"
-        app:layout_constraintTop_toBottomOf="@+id/myEdtTxt"/>
+        android:id="@+id/prefButtons"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/prefText"
-        app:layout_constraintTop_toBottomOf="@+id/prefButton"/>
+        app:layout_constraintTop_toBottomOf="@id/prefButtons"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
