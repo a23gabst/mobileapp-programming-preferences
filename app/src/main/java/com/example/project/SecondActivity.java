@@ -8,15 +8,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
     private SharedPreferences myPreferenceRef;
     private SharedPreferences.Editor myPreferenceEditor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.secondactivity_main);
 
-        myPreferenceRef = getPreferences(MODE_PRIVATE);
+        myPreferenceRef = getSharedPreferences("MyPreferenceName",MODE_PRIVATE);
         myPreferenceEditor = myPreferenceRef.edit();
 
         TextView prefTextRef=new TextView(this);

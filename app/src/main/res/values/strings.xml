@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Shared Preferences</string>
     <string name="app_save">Spara</string>
+    <string name="app_next_page">Gå till nästa sida!</string>
 </resources>
